@@ -1,16 +1,15 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ApacheTech.VintageMods.DotNetFrameworkLauncher")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A .NET Framework 4.6.1 stub launcher for Vintage Story mods made in .NET Standard 2.0.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("ApacheTech Solutions")]
 [assembly: AssemblyProduct("ApacheTech.VintageMods.DotNetFrameworkLauncher")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
+[assembly: AssemblyCopyright("Copyright © ApacheTech Solutions, 2021. All Rights Reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
