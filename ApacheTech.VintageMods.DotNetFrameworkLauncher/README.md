@@ -21,10 +21,16 @@ manually within the Debug tab of the project Properties.
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
 		<StartAction>Program</StartAction>
 		<StartProgram>$(VINTAGE_STORY)\Vintagestory.exe</StartProgram>
-		<StartArguments>--addModPath="$(SolutionDir)$(SolutionName)\bin\$(Configuration)"</StartArguments>
+		<StartArguments>--addModPath="$(SolutionDir)$(SolutionName)\bin\$(Configuration)\netstandard2.0" --addOrigin="$(SolutionDir)$(SolutionName)\bin\$(Configuration)\netstandard2.0\assets" --addOrigin="$(SolutionDir)$(SolutionName)\bin\$(Configuration)\netstandard2.0\_Includes\assets"</StartArguments>
 		<StartWorkingDirectory>$(VINTAGE_STORY)</StartWorkingDirectory>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+		<StartAction>Program</StartAction>
+		<StartProgram>$(VINTAGE_STORY)\Vintagestory.exe</StartProgram>
+		<StartArguments>--addModPath="$(SolutionDir).releases"</StartArguments>
+		<StartWorkingDirectory>$(VINTAGE_STORY)</StartWorkingDirectory>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Package|AnyCPU'">
 		<StartAction>Program</StartAction>
 		<StartProgram>$(VINTAGE_STORY)\Vintagestory.exe</StartProgram>
 		<StartArguments>--addModPath="$(SolutionDir).releases"</StartArguments>
