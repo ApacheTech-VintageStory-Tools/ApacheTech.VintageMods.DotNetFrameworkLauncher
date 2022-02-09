@@ -14,26 +14,21 @@ If you have any issues with the automatic setting of file and folder locations, 
 manually within the Debug tab of the project Properties.
 
 ### Default Properties Settings:
+ --addOrigin="$(SolutionDir)$(SolutionName)\bin\$(Configuration)\netstandard2.0\assets" --addOrigin="$(SolutionDir)$(SolutionName)\bin\$(Configuration)\netstandard2.0\_Includes\assets"
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-		<StartAction>Program</StartAction>
-		<StartProgram>$(VINTAGE_STORY)\Vintagestory.exe</StartProgram>
-		<StartArguments>--addModPath="$(SolutionDir)$(SolutionName)\bin\$(Configuration)\netstandard2.0" --addOrigin="$(SolutionDir)$(SolutionName)\bin\$(Configuration)\netstandard2.0\assets" --addOrigin="$(SolutionDir)$(SolutionName)\bin\$(Configuration)\netstandard2.0\_Includes\assets"</StartArguments>
-		<StartWorkingDirectory>$(VINTAGE_STORY)</StartWorkingDirectory>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-		<StartAction>Program</StartAction>
-		<StartProgram>$(VINTAGE_STORY)\Vintagestory.exe</StartProgram>
-		<StartArguments>--addModPath="$(SolutionDir).releases"</StartArguments>
-		<StartWorkingDirectory>$(VINTAGE_STORY)</StartWorkingDirectory>
-	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Package|AnyCPU'">
 		<StartAction>Program</StartAction>
 		<StartProgram>$(VINTAGE_STORY)\Vintagestory.exe</StartProgram>
-		<StartArguments>--addModPath="$(SolutionDir).releases"</StartArguments>
+		<StartArguments>--tracelog --addModPath="$(SolutionDir).releases"</StartArguments>
+		<StartWorkingDirectory>$(VINTAGE_STORY)</StartWorkingDirectory>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' != 'Package|AnyCPU'">
+		<StartAction>Program</StartAction>
+		<StartProgram>$(VINTAGE_STORY)\Vintagestory.exe</StartProgram>
+		<StartArguments>--tracelog --addModPath="$(SolutionDir)$(SolutionName)\bin\$(Configuration)"</StartArguments>
 		<StartWorkingDirectory>$(VINTAGE_STORY)</StartWorkingDirectory>
 	</PropertyGroup>
 </Project>
