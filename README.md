@@ -15,6 +15,8 @@ manually within the Debug tab of the project Properties.
 
 ### Default Properties Settings:
 
+`$(ProjectName).csproj.user` file:
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
