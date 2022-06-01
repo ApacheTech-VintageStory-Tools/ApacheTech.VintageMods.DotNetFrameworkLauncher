@@ -23,13 +23,13 @@ manually within the Debug tab of the project Properties.
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
 		<StartAction>Program</StartAction>
 		<StartProgram>$(VINTAGE_STORY)\Vintagestory.exe</StartProgram>
-		<StartArguments>--addModPath="$(SolutionDir)$(SolutionName)\bin\$(Configuration)"</StartArguments>
+		<StartArguments>--tracelog --addModPath="$(SolutionDir)$(SolutionName)\bin\$(Configuration)"</StartArguments>
 		<StartWorkingDirectory>$(VINTAGE_STORY)</StartWorkingDirectory>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
 		<StartAction>Program</StartAction>
 		<StartProgram>$(VINTAGE_STORY)\Vintagestory.exe</StartProgram>
-		<StartArguments>--addModPath="$(SolutionDir).releases"</StartArguments>
+		<StartArguments>--tracelog --addModPath="$(SolutionDir).releases"</StartArguments>
 		<StartWorkingDirectory>$(VINTAGE_STORY)</StartWorkingDirectory>
 	</PropertyGroup>
 </Project>
