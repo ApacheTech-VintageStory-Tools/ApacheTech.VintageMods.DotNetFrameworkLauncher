@@ -3,10 +3,10 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
 		<StartAction>Program</StartAction>
 		<StartProgram>$(VINTAGE_STORY)\Vintagestory.exe</StartProgram>
-		<StartArguments>--tracelog --addModPath="$(SolutionDir)$(SolutionName)\bin\$(Configuration)"</StartArguments>
+		<StartArguments>--tracelog --addModPath="$(SolutionDir).debug"</StartArguments>
 		<StartWorkingDirectory>$(VINTAGE_STORY)</StartWorkingDirectory>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Package|AnyCPU'">
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
 		<StartAction>Program</StartAction>
 		<StartProgram>$(VINTAGE_STORY)\Vintagestory.exe</StartProgram>
 		<StartArguments>--tracelog --addModPath="$(SolutionDir).releases"</StartArguments>
