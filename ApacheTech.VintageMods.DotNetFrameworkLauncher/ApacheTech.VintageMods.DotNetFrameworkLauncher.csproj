@@ -62,5 +62,8 @@
     <None Include="App.config" />
     <None Include="README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApacheTech.VintageMods.DotNetFrameworkLauncher.csproj.user" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
