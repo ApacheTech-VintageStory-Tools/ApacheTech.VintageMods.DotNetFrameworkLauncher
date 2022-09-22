@@ -12,7 +12,4 @@
     <StartArguments>--tracelog --addModPath="$(SolutionDir).releases"</StartArguments>
     <StartWorkingDirectory>$(VINTAGE_STORY)</StartWorkingDirectory>
   </PropertyGroup>
-  <PropertyGroup>
-    <ProjectView>ProjectFiles</ProjectView>
-  </PropertyGroup>
 </Project>

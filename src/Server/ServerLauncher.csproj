@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EBC0233E-F9F2-4B60-B145-143CD650A63B}</ProjectGuid>
+    <ProjectGuid>{52DEBCC2-2ED0-4B21-8612-7E9CF7E3850D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>ApacheTech.VintageMods.DotNetFrameworkLauncher</RootNamespace>
-    <AssemblyName>ApacheTech.VintageMods.DotNetFrameworkLauncher</AssemblyName>
+    <AssemblyName>ClientLauncher</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,16 @@
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Launch Server|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Launch Server\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LAUNCH_SERVER</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -59,11 +69,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ApacheTech.VintageMods.DotNetFrameworkLauncher.csproj.user" />
+    <Content Include="..\..\docs\README.md">
+      <Link>README.md</Link>
+    </Content>
+    <Content Include="ServerLauncher.csproj.user" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
 </Project>
