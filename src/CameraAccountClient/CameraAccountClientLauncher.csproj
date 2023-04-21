@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EBC0233E-F9F2-4B60-B145-143CD650A63B}</ProjectGuid>
+    <ProjectGuid>{A6C31166-26E6-4860-AD0A-882594C71C2E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>ApacheTech.VintageMods.DotNetFrameworkLauncher</RootNamespace>
     <AssemblyName>ClientLauncher</AssemblyName>
@@ -42,16 +42,6 @@
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Launch Server|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Launch Server\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;LAUNCH_SERVER</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <LangVersion>7.3</LangVersion>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -72,8 +62,7 @@
     <Content Include="..\..\docs\README.md">
       <Link>README.md</Link>
     </Content>
-    <Content Include="ClientLauncher.csproj.user" />
-    <Content Include="ClientLauncher.csproj.user" />
+    <Content Include="CameraAccountClientLauncher.csproj.user" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

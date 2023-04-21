@@ -2,14 +2,14 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
-    <StartProgram>$(VINTAGE_STORY)\Vintagestory.exe</StartProgram>
-    <StartArguments>--tracelog --dataPath="$(VINTAGE_STORY_DATA)" --addModPath="$(SolutionDir).debug" --addModOrigin="$(SolutionDir).debug\$(SolutionName)\assets"</StartArguments>
+    <StartProgram>$(VINTAGE_STORY)\VintagestoryCA.exe</StartProgram>
+    <StartArguments>--tracelog --dataPath="$(APPDATA)\VintagestoryDataCA" --addModPath="$(VINTAGE_STORY_DATA)\Mods" --addModPath="$(SolutionDir).debug" --addModOrigin="$(SolutionDir).debug\$(SolutionName)\assets"</StartArguments>
     <StartWorkingDirectory>$(VINTAGE_STORY)</StartWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Package|AnyCPU'">
     <StartAction>Program</StartAction>
-    <StartProgram>$(VINTAGE_STORY)\Vintagestory.exe</StartProgram>
-    <StartArguments>--tracelog --dataPath="$(VINTAGE_STORY_DATA)" --addModPath="$(SolutionDir).releases"</StartArguments>
+    <StartProgram>$(VINTAGE_STORY)\VintagestoryCA.exe</StartProgram>
+    <StartArguments>--tracelog --dataPath="$(APPDATA)\VintagestoryDataCA" --addModPath="$(VINTAGE_STORY_DATA)\Mods" --addModPath="$(SolutionDir).releases"</StartArguments>
     <StartWorkingDirectory>$(VINTAGE_STORY)</StartWorkingDirectory>
   </PropertyGroup>
 </Project>
