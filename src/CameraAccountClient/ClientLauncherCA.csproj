@@ -62,7 +62,7 @@
     <Content Include="..\..\docs\README.md">
       <Link>README.md</Link>
     </Content>
-    <Content Include="CameraAccountClientLauncher.csproj.user" />
+    <Content Include="ClientLauncherCA.csproj.user" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

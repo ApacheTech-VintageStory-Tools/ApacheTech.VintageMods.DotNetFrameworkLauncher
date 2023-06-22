@@ -3,13 +3,13 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
 		<StartAction>Program</StartAction>
 		<StartProgram>$(VINTAGE_STORY)\VintagestoryServer.exe</StartProgram>
-		<StartArguments>--tracelog --dataPath="$(VINTAGE_STORY_DATA)" --addModPath="$(SolutionDir).debug" --addModOrigin="$(SolutionDir).debug\$(SolutionName)\assets"</StartArguments>
+		<StartArguments>--tracelog --dataPath="$(VINTAGE_STORY_DATA)" --addModPath="$(SolutionDir).debug\netstandard2.0" --addModOrigin="$(SolutionDir).debug\netstandard2.0\$(SolutionName)\assets"</StartArguments>
 		<StartWorkingDirectory>$(VINTAGE_STORY)</StartWorkingDirectory>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Package|AnyCPU'">
 		<StartAction>Program</StartAction>
 		<StartProgram>$(VINTAGE_STORY)\VintagestoryServer.exe</StartProgram>
-		<StartArguments>--tracelog --dataPath="$(VINTAGE_STORY_DATA)" --addModPath="$(SolutionDir).releases"</StartArguments>
+		<StartArguments>--tracelog --dataPath="$(VINTAGE_STORY_DATA)" --addModPath="$(SolutionDir).releases\netstandard2.0"</StartArguments>
 		<StartWorkingDirectory>$(VINTAGE_STORY)</StartWorkingDirectory>
 	</PropertyGroup>
 </Project>
